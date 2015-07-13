@@ -81,7 +81,6 @@
        // !volume: change volume, default is 1.0
        var search = e.Message.match(/^!volume[ ]?(\d+[.]?[\d]?)/);
        if (search) {
-                console.log(search[1]);
                 piepan.Audio.SetVolume(search[1]);
        }
     });
