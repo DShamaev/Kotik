@@ -36,10 +36,10 @@
                 return;
             }
 
-            if (piepan.Audio.IsPlaying()) {
+            if (piepan.Audio.IsPlaying() && !interrupt_sounds) {
                 return;
             }
-
+			piepan.Audio.Stop();
             piepan.Audio.Play({
                 filename: soundFile
             });
